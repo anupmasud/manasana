@@ -12,7 +12,7 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { EMOTIONS, POSES, SAFETY_NOTE } from './src/data';
 
-const APP_VERSION = 'v1.2.0';
+const APP_VERSION = 'v1.3.0';
 const MIN_SEC = 10;
 const MAX_SEC = 600;
 const STEP = 10;
@@ -144,8 +144,8 @@ function EmotionCard({ e, onPick }) {
 }
 
 function Home({ onPick }) {
-  const difficult = EMOTIONS.filter((e) => e.group === 'difficult');
-  const good = EMOTIONS.filter((e) => e.group === 'good');
+  const [tab, setTab] = useState('difficult');
+  const items = EMOTIONS.filter((e) => e.group === tab);
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
       <Text style={styles.homeDev}>मनस् आसन</Text>
@@ -153,16 +153,27 @@ function Home({ onPick }) {
       <Text style={styles.homeTagline}>a seat for every feeling</Text>
       <Text style={styles.prompt}>How are you feeling right now?</Text>
 
-      <Text style={styles.groupLabel}>Difficult feelings</Text>
-      <View style={styles.grid}>
-        {difficult.map((e) => (
-          <EmotionCard key={e.id} e={e} onPick={onPick} />
-        ))}
+      <View style={styles.segment}>
+        <Pressable
+          style={[styles.segBtn, tab === 'difficult' && styles.segActive]}
+          onPress={() => setTab('difficult')}
+          accessibilityRole="tab"
+          accessibilityState={{ selected: tab === 'difficult' }}
+        >
+          <Text style={[styles.segText, tab === 'difficult' && styles.segTextActive]}>Difficult feelings</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.segBtn, tab === 'good' && styles.segActive]}
+          onPress={() => setTab('good')}
+          accessibilityRole="tab"
+          accessibilityState={{ selected: tab === 'good' }}
+        >
+          <Text style={[styles.segText, tab === 'good' && styles.segTextActive]}>Good feelings</Text>
+        </Pressable>
       </View>
 
-      <Text style={styles.groupLabel}>Good feelings</Text>
       <View style={styles.grid}>
-        {good.map((e) => (
+        {items.map((e) => (
           <EmotionCard key={e.id} e={e} onPick={onPick} />
         ))}
       </View>
@@ -749,8 +760,13 @@ const styles = StyleSheet.create({
   homeDev: { fontSize: 30, color: PURPLE, fontWeight: '600', textAlign: 'center', marginTop: 10 },
   homeLatin: { fontSize: 17, color: PURPLE, letterSpacing: 2, textAlign: 'center', marginTop: 4 },
   homeTagline: { fontFamily: SERIF, fontStyle: 'italic', fontSize: 19, color: DGREEN, textAlign: 'center', marginTop: 10 },
-  prompt: { fontSize: 15, color: MUTE, textAlign: 'center', marginTop: 14, marginBottom: 8 },
-  groupLabel: { fontSize: 13, fontWeight: '700', color: PURPLE, letterSpacing: 0.5, textTransform: 'uppercase', marginTop: 14, marginBottom: 12 },
+  prompt: { fontSize: 15, color: MUTE, textAlign: 'center', marginTop: 14, marginBottom: 10 },
+
+  segment: { flexDirection: 'row', backgroundColor: TINT, borderRadius: 999, padding: 4, marginBottom: 18 },
+  segBtn: { flex: 1, paddingVertical: 10, borderRadius: 999, alignItems: 'center' },
+  segActive: { backgroundColor: CARD, shadowColor: '#5a4fcf', shadowOpacity: 0.09, shadowRadius: 4, shadowOffset: { width: 0, height: 1 }, elevation: 1 },
+  segText: { fontSize: 14, fontWeight: '600', color: MUTE },
+  segTextActive: { color: PURPLE },
 
   /* Top bar */
   topbar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 },
