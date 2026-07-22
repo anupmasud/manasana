@@ -6,7 +6,17 @@ Emotion-driven yoga. Pick how you're feeling, get a short curated set of yoga po
 
 ## Status
 
-Early / pre-development. Requirements drafted. **Stack decided:** Expo (React Native + React Native Web) — one codebase for a native iOS app and a web/PWA, mobile-first. Pose instructions and yoga review still pending.
+**v1 live (web/PWA):** https://anupmasud.github.io/manasana/ — open on your phone and *Add to Home Screen* to install.
+
+Built with Expo (React Native + React Native Web) — one codebase, mobile-first, targeting a native iOS app and web/PWA. The web build is deployed to GitHub Pages from the `gh-pages` branch. Native iOS (TestFlight via EAS) and a yoga review of the poses are still pending.
+
+## Develop & deploy
+
+```bash
+npm run web        # local dev in the browser
+npm run ios        # local dev in the iOS Simulator (needs Xcode)
+npm run build:web  # export static web build to dist/ (for GitHub Pages)
+```
 
 ## Docs
 
