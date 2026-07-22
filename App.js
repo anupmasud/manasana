@@ -50,8 +50,10 @@ function signalDone() {
 function Home({ onPick }) {
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
+      <Text style={styles.brandHi}>मानसना</Text>
       <Text style={styles.brand}>Manasana</Text>
-      <Text style={styles.tagline}>How are you feeling right now?</Text>
+      <Text style={styles.tagline}>A pose for every mood</Text>
+      <Text style={styles.prompt}>How are you feeling right now?</Text>
       <View style={styles.grid}>
         {EMOTIONS.map((e) => (
           <Pressable
@@ -334,8 +336,10 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: BG },
   scroll: { padding: 20, paddingBottom: 48, maxWidth: 560, width: '100%', alignSelf: 'center' },
 
-  brand: { fontSize: 34, fontWeight: '700', color: ACCENT, textAlign: 'center', marginTop: 12 },
-  tagline: { fontSize: 17, color: MUTE, textAlign: 'center', marginTop: 6, marginBottom: 20 },
+  brandHi: { fontSize: 24, fontWeight: '600', color: ACCENT, textAlign: 'center', marginTop: 14 },
+  brand: { fontSize: 34, fontWeight: '700', color: ACCENT, textAlign: 'center', marginTop: 2 },
+  tagline: { fontSize: 17, color: MUTE, textAlign: 'center', marginTop: 6 },
+  prompt: { fontSize: 15, color: MUTE, textAlign: 'center', marginTop: 14, marginBottom: 18 },
 
   grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' },
   emotionCard: {
