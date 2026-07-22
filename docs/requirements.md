@@ -45,10 +45,16 @@ Help a user move from an emotional state toward a more balanced one by suggestin
 - FR-5: Each pose shows at minimum a name and an image/illustration.
 
 ### Guided flow
-- FR-12: From the pose list the user can either tap a single pose, or **Start guided flow** through all 3 poses in the listed order.
-- FR-13: In a guided flow, each pose shows its instructions and timer; timers still never auto-start (FR-8 applies).
-- FR-14: On timer completion (or a *Next* action) the flow advances to the next pose and shows progress (e.g., *2 of 3*).
-- FR-15: The user can exit the flow at any point and return to the pose list without losing the emotion selection.
+- FR-12: From the pose list the user can either tap a single pose, or open **Guided flow**, which first shows a **flow setup** screen.
+- FR-13: Flow setup lets the user configure the flow before it runs:
+  - **Choose which poses to include** (toggle each; at least one required).
+  - **Change each pose's duration** (same range/steps as FR-9a).
+  - **Add rest between poses** (0–120s; 0 = none).
+  - **Repeat** the whole flow *N×* (1–10).
+  - **Run continuously** (on = auto-advance through poses and rests; off = the user starts each step).
+  - A live estimate shows pose count and approximate total time.
+- FR-14: In the flow runner, each pose shows its instructions and timer; rests show a rest screen. The **first** step never auto-starts (FR-8). In continuous mode, once started, each step auto-advances on completion (chime between steps); in manual mode the user taps *Next*.
+- FR-15: The runner shows progress (e.g., *Pose 2 of 3 · round 1/2*), lets the user *Pause / Reset / Skip* the current step, and can be exited to the pose list at any point without losing the emotion selection. A **completion** screen appears after the final step.
 
 ### Pose instructions
 - FR-6: Selecting a pose shows step-by-step setup instructions.
