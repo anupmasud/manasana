@@ -107,6 +107,21 @@ Ten emotions ship in v1, each with 3 candidate poses (beginner–intermediate). 
 
 *Notes:* poses recur across related states (e.g. restorative shapes for both *exhausted* and *overwhelmed*) — this is intentional. Deep backbends (Camel, Fish) were removed for accessibility. **Cobra**, **Bridge**, and **Sphinx** remain as gentle, beginner-friendly backbends — flag if you'd like these swapped for non-backbend openers too.
 
+### 6.2 Good feelings (v1.2)
+
+Six positive feelings, grouped separately on the home screen ("Good feelings"). Intent shifts from *soothing* to *savoring / sustaining / channelling* the feeling.
+
+| # | Feeling | Sense | Poses | Focus |
+|---|---------|-------|-------|-------|
+| 11 | **Grateful** | thankful, full | Seated Heart-Center · Bridge · Reclined Bound Angle | Receptive, open-hearted shapes to receive and savor |
+| 12 | **Calm** | at peace | Seated Forward Fold · Reclined Twist · Legs-Up-the-Wall | Restorative holds to sustain the calm |
+| 13 | **Joyful** | light, happy | Upward Salute · Standing Half-Moon · Happy Baby | Expansive, light, playful — express the joy |
+| 14 | **Energized** | alive, buzzing | Chair · Warrior II · Low Lunge | Strong standing poses to channel the buzz |
+| 15 | **Confident** | strong, sure | Mountain · Goddess · Warrior II | Grounded, powerful stances to embody it |
+| 16 | **Loving** | warm, open-hearted | Sphinx · Cow Face Arms · Cobra | Gentle heart-openers to expand the warmth |
+
+New poses added for these: **Seated Heart-Center**, **Reclined Twist**, **Standing Half-Moon**, **Happy Baby**, **Goddess** (all beginner–intermediate; see [poses.md](poses.md)).
+
 ## 7. Non-Functional Requirements
 
 - **Simplicity**: Any pose reachable in ≤ 2 taps from launch.

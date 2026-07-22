@@ -31,8 +31,13 @@ Draft setup instructions and **default timer durations** for the 19 distinct pos
 | Low Lunge | B | 45s | ✓ | Numb, Unmotivated |
 | Sphinx Pose | B | 45s | — | Lonely |
 | Cow Face Arms | B | 30s | ✓ | Lonely |
-| Chair Pose | B–I | 30s | — | Unmotivated |
-| Upward Salute | B | 30s | — | Unmotivated |
+| Chair Pose | B–I | 30s | — | Unmotivated, Energized |
+| Upward Salute | B | 30s | — | Unmotivated, Joyful |
+| Seated Heart-Center | B | 60s | — | Grateful |
+| Reclined Twist | B | 30s | ✓ | Calm |
+| Standing Half-Moon | B | 30s | ✓ | Joyful |
+| Happy Baby | B | 45s | — | Joyful |
+| Goddess Pose | B–I | 30s | — | Confident |
 
 ---
 
@@ -156,3 +161,33 @@ Draft setup instructions and **default timer durations** for the 19 distinct pos
 2. Inhale and sweep both arms out and up overhead.
 3. Reach your fingertips up, palms facing or together; lift your gaze slightly if comfortable.
 4. Relax your shoulders away from your ears. Breathe.
+
+### Seated Heart-Center — B · 60s
+1. Sit comfortably cross-legged, spine tall — a cushion under your hips helps.
+2. Bring your palms together at the center of your chest.
+3. Soften your shoulders; lower your gaze or close your eyes.
+4. Breathe into your heart space and rest in a moment of thanks.
+
+### Reclined Twist — B · 30s *(per side)*
+1. Lie on your back and hug both knees into your chest.
+2. Let both knees fall gently to the right; open your arms wide like a T.
+3. Turn your gaze softly to the left, keeping both shoulders on the floor.
+4. Breathe into the twist, then switch sides.
+
+### Standing Half-Moon — B · 30s *(per side)*
+1. Stand tall, feet together, and reach both arms overhead.
+2. Clasp your hands, releasing the index fingers to point up.
+3. On an exhale, lean gently to the right, keeping both feet grounded.
+4. Feel the long stretch up your left side. Hold, then switch sides.
+
+### Happy Baby — B · 45s
+1. Lie on your back and draw both knees toward your armpits.
+2. Hold the outer edges of your feet (or your shins or ankles).
+3. Gently draw your knees toward the floor, ankles stacked over knees.
+4. Rock softly side to side if it feels good; breathe and smile.
+
+### Goddess Pose — B–I · 30s
+1. Step your feet wide, toes turned out about 45°.
+2. Bend your knees and sink your hips toward knee height, knees tracking over toes.
+3. Raise your arms and bend the elbows like goalposts, palms forward.
+4. Keep your chest lifted and tailbone heavy. Breathe with strength.

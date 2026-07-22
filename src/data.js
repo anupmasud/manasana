@@ -255,19 +255,93 @@ export const POSES = {
       'Relax your shoulders away from your ears. Breathe.',
     ],
   },
+  'seated-heart-center': {
+    id: 'seated-heart-center',
+    name: 'Seated Heart-Center',
+    level: 'B',
+    defaultDurationSec: 60,
+    perSide: false,
+    instructions: [
+      'Sit comfortably cross-legged, spine tall — a cushion under your hips helps.',
+      'Bring your palms together at the center of your chest.',
+      'Soften your shoulders; lower your gaze or close your eyes.',
+      'Breathe into your heart space and rest in a moment of thanks.',
+    ],
+  },
+  'reclined-twist': {
+    id: 'reclined-twist',
+    name: 'Reclined Twist',
+    level: 'B',
+    defaultDurationSec: 30,
+    perSide: true,
+    instructions: [
+      'Lie on your back and hug both knees into your chest.',
+      'Let both knees fall gently to the right; open your arms wide like a T.',
+      'Turn your gaze softly to the left, keeping both shoulders on the floor.',
+      'Breathe into the twist, then switch sides.',
+    ],
+  },
+  'standing-half-moon': {
+    id: 'standing-half-moon',
+    name: 'Standing Half-Moon',
+    level: 'B',
+    defaultDurationSec: 30,
+    perSide: true,
+    instructions: [
+      'Stand tall, feet together, and reach both arms overhead.',
+      'Clasp your hands, releasing the index fingers to point up.',
+      'On an exhale, lean gently to the right, keeping both feet grounded.',
+      'Feel the long stretch up your left side. Hold, then switch sides.',
+    ],
+  },
+  'happy-baby': {
+    id: 'happy-baby',
+    name: 'Happy Baby',
+    level: 'B',
+    defaultDurationSec: 45,
+    perSide: false,
+    instructions: [
+      'Lie on your back and draw both knees toward your armpits.',
+      'Hold the outer edges of your feet (or your shins or ankles).',
+      'Gently draw your knees toward the floor, ankles stacked over knees.',
+      'Rock softly side to side if it feels good; breathe and smile.',
+    ],
+  },
+  goddess: {
+    id: 'goddess',
+    name: 'Goddess Pose',
+    level: 'B–I',
+    defaultDurationSec: 30,
+    perSide: false,
+    instructions: [
+      'Step your feet wide, toes turned out about 45°.',
+      'Bend your knees and sink your hips toward knee height, knees tracking over toes.',
+      'Raise your arms and bend the elbows like goalposts, palms forward.',
+      'Keep your chest lifted and tailbone heavy. Breathe with strength.',
+    ],
+  },
 };
 
 export const EMOTIONS = [
-  { id: 'exhausted', label: 'Exhausted', sense: 'depleted', emoji: '🥱', poseIds: ['legs-up-wall', 'childs-pose', 'reclined-bound-angle'] },
-  { id: 'confused', label: 'Confused', sense: 'mental fog', emoji: '🤔', poseIds: ['modified-tree', 'seated-twist', 'eagle-arms'] },
-  { id: 'afraid', label: 'Afraid', sense: 'fear / anxiety', emoji: '😨', poseIds: ['mountain', 'standing-forward-fold', 'cat-cow'] },
-  { id: 'hopeless', label: 'Hopeless', sense: 'despair', emoji: '🌧️', poseIds: ['cobra', 'bridge', 'warrior-2'] },
-  { id: 'restless', label: 'Restless', sense: "can't settle", emoji: '🌀', poseIds: ['tree', 'warrior-2', 'seated-forward-fold'] },
-  { id: 'overwhelmed', label: 'Overwhelmed', sense: 'too much', emoji: '🌊', poseIds: ['childs-pose', 'standing-forward-fold', 'legs-up-wall'] },
-  { id: 'numb', label: 'Numb', sense: 'flat', emoji: '😶', poseIds: ['cat-cow', 'low-lunge', 'bridge'] },
-  { id: 'lonely', label: 'Lonely', sense: 'disconnected', emoji: '🌙', poseIds: ['sphinx', 'reclined-bound-angle', 'cow-face-arms'] },
-  { id: 'unmotivated', label: 'Unmotivated / Stuck', sense: "can't get going", emoji: '🪫', poseIds: ['chair', 'low-lunge', 'upward-salute'] },
-  { id: 'ashamed', label: 'Ashamed', sense: 'guilt', emoji: '🙈', poseIds: ['childs-pose', 'cobra', 'reclined-bound-angle'] },
+  // Difficult feelings — soothe & rebalance
+  { id: 'exhausted', label: 'Exhausted', sense: 'depleted', emoji: '🥱', group: 'difficult', poseIds: ['legs-up-wall', 'childs-pose', 'reclined-bound-angle'] },
+  { id: 'confused', label: 'Confused', sense: 'mental fog', emoji: '🤔', group: 'difficult', poseIds: ['modified-tree', 'seated-twist', 'eagle-arms'] },
+  { id: 'afraid', label: 'Afraid', sense: 'fear / anxiety', emoji: '😨', group: 'difficult', poseIds: ['mountain', 'standing-forward-fold', 'cat-cow'] },
+  { id: 'hopeless', label: 'Hopeless', sense: 'despair', emoji: '🌧️', group: 'difficult', poseIds: ['cobra', 'bridge', 'warrior-2'] },
+  { id: 'restless', label: 'Restless', sense: "can't settle", emoji: '🌀', group: 'difficult', poseIds: ['tree', 'warrior-2', 'seated-forward-fold'] },
+  { id: 'overwhelmed', label: 'Overwhelmed', sense: 'too much', emoji: '🌊', group: 'difficult', poseIds: ['childs-pose', 'standing-forward-fold', 'legs-up-wall'] },
+  { id: 'numb', label: 'Numb', sense: 'flat', emoji: '😶', group: 'difficult', poseIds: ['cat-cow', 'low-lunge', 'bridge'] },
+  { id: 'lonely', label: 'Lonely', sense: 'disconnected', emoji: '🌙', group: 'difficult', poseIds: ['sphinx', 'reclined-bound-angle', 'cow-face-arms'] },
+  { id: 'unmotivated', label: 'Unmotivated / Stuck', sense: "can't get going", emoji: '🪫', group: 'difficult', poseIds: ['chair', 'low-lunge', 'upward-salute'] },
+  { id: 'ashamed', label: 'Ashamed', sense: 'guilt', emoji: '🙈', group: 'difficult', poseIds: ['childs-pose', 'cobra', 'reclined-bound-angle'] },
+
+  // Good feelings — savor & sustain
+  { id: 'grateful', label: 'Grateful', sense: 'thankful, full', emoji: '🙏', group: 'good', poseIds: ['seated-heart-center', 'bridge', 'reclined-bound-angle'] },
+  { id: 'calm', label: 'Calm', sense: 'at peace', emoji: '😌', group: 'good', poseIds: ['seated-forward-fold', 'reclined-twist', 'legs-up-wall'] },
+  { id: 'joyful', label: 'Joyful', sense: 'light, happy', emoji: '😊', group: 'good', poseIds: ['upward-salute', 'standing-half-moon', 'happy-baby'] },
+  { id: 'energized', label: 'Energized', sense: 'alive, buzzing', emoji: '⚡', group: 'good', poseIds: ['chair', 'warrior-2', 'low-lunge'] },
+  { id: 'confident', label: 'Confident', sense: 'strong, sure', emoji: '💪', group: 'good', poseIds: ['mountain', 'goddess', 'warrior-2'] },
+  { id: 'loving', label: 'Loving', sense: 'warm, open-hearted', emoji: '💗', group: 'good', poseIds: ['sphinx', 'cow-face-arms', 'cobra'] },
 ];
 
 export const SAFETY_NOTE =

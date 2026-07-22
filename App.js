@@ -12,7 +12,7 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { EMOTIONS, POSES, SAFETY_NOTE } from './src/data';
 
-const APP_VERSION = 'v1.1.0';
+const APP_VERSION = 'v1.2.0';
 const MIN_SEC = 10;
 const MAX_SEC = 600;
 const STEP = 10;
@@ -128,28 +128,45 @@ function Splash({ onBegin }) {
   );
 }
 
+function EmotionCard({ e, onPick }) {
+  return (
+    <Pressable
+      style={({ pressed }) => [styles.emotionCard, pressed && styles.pressed]}
+      onPress={() => onPick(e)}
+      accessibilityRole="button"
+      accessibilityLabel={`I'm feeling ${e.label}`}
+    >
+      <Text style={styles.emoji}>{e.emoji}</Text>
+      <Text style={styles.emotionLabel}>{e.label}</Text>
+      <Text style={styles.emotionSense}>{e.sense}</Text>
+    </Pressable>
+  );
+}
+
 function Home({ onPick }) {
+  const difficult = EMOTIONS.filter((e) => e.group === 'difficult');
+  const good = EMOTIONS.filter((e) => e.group === 'good');
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
       <Text style={styles.homeDev}>मनस् आसन</Text>
       <Text style={styles.homeLatin}>manas · āsana</Text>
       <Text style={styles.homeTagline}>a seat for every feeling</Text>
       <Text style={styles.prompt}>How are you feeling right now?</Text>
+
+      <Text style={styles.groupLabel}>Difficult feelings</Text>
       <View style={styles.grid}>
-        {EMOTIONS.map((e) => (
-          <Pressable
-            key={e.id}
-            style={({ pressed }) => [styles.emotionCard, pressed && styles.pressed]}
-            onPress={() => onPick(e)}
-            accessibilityRole="button"
-            accessibilityLabel={`I'm feeling ${e.label}`}
-          >
-            <Text style={styles.emoji}>{e.emoji}</Text>
-            <Text style={styles.emotionLabel}>{e.label}</Text>
-            <Text style={styles.emotionSense}>{e.sense}</Text>
-          </Pressable>
+        {difficult.map((e) => (
+          <EmotionCard key={e.id} e={e} onPick={onPick} />
         ))}
       </View>
+
+      <Text style={styles.groupLabel}>Good feelings</Text>
+      <View style={styles.grid}>
+        {good.map((e) => (
+          <EmotionCard key={e.id} e={e} onPick={onPick} />
+        ))}
+      </View>
+
       <Text style={styles.safety}>{SAFETY_NOTE}</Text>
       <Text style={styles.version}>{APP_VERSION}</Text>
     </ScrollView>
@@ -732,7 +749,8 @@ const styles = StyleSheet.create({
   homeDev: { fontSize: 30, color: PURPLE, fontWeight: '600', textAlign: 'center', marginTop: 10 },
   homeLatin: { fontSize: 17, color: PURPLE, letterSpacing: 2, textAlign: 'center', marginTop: 4 },
   homeTagline: { fontFamily: SERIF, fontStyle: 'italic', fontSize: 19, color: DGREEN, textAlign: 'center', marginTop: 10 },
-  prompt: { fontSize: 15, color: MUTE, textAlign: 'center', marginTop: 14, marginBottom: 18 },
+  prompt: { fontSize: 15, color: MUTE, textAlign: 'center', marginTop: 14, marginBottom: 8 },
+  groupLabel: { fontSize: 13, fontWeight: '700', color: PURPLE, letterSpacing: 0.5, textTransform: 'uppercase', marginTop: 14, marginBottom: 12 },
 
   /* Top bar */
   topbar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 },
