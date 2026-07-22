@@ -12,7 +12,7 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { EMOTIONS, POSES, SAFETY_NOTE } from './src/data';
 
-const APP_VERSION = 'v1.3.0';
+const APP_VERSION = 'v1.3.1';
 const MIN_SEC = 10;
 const MAX_SEC = 600;
 const STEP = 10;
@@ -144,7 +144,7 @@ function EmotionCard({ e, onPick }) {
 }
 
 function Home({ onPick }) {
-  const [tab, setTab] = useState('difficult');
+  const [tab, setTab] = useState('good');
   const items = EMOTIONS.filter((e) => e.group === tab);
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
@@ -155,20 +155,20 @@ function Home({ onPick }) {
 
       <View style={styles.segment}>
         <Pressable
-          style={[styles.segBtn, tab === 'difficult' && styles.segActive]}
-          onPress={() => setTab('difficult')}
-          accessibilityRole="tab"
-          accessibilityState={{ selected: tab === 'difficult' }}
-        >
-          <Text style={[styles.segText, tab === 'difficult' && styles.segTextActive]}>Difficult feelings</Text>
-        </Pressable>
-        <Pressable
           style={[styles.segBtn, tab === 'good' && styles.segActive]}
           onPress={() => setTab('good')}
           accessibilityRole="tab"
           accessibilityState={{ selected: tab === 'good' }}
         >
           <Text style={[styles.segText, tab === 'good' && styles.segTextActive]}>Good feelings</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.segBtn, tab === 'difficult' && styles.segActive]}
+          onPress={() => setTab('difficult')}
+          accessibilityRole="tab"
+          accessibilityState={{ selected: tab === 'difficult' }}
+        >
+          <Text style={[styles.segText, tab === 'difficult' && styles.segTextActive]}>Difficult feelings</Text>
         </Pressable>
       </View>
 
