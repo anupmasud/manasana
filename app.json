@@ -1,15 +1,19 @@
 {
   "expo": {
-    "name": "manasana-app",
-    "slug": "manasana-app",
+    "name": "Manasana",
+    "slug": "manasana",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "manasana",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#eef4f0",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.manasana.app"
     },
     "android": {
+      "package": "com.manasana.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -18,7 +22,18 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "Manasana",
+      "shortName": "Manasana",
+      "themeColor": "#4c8a72",
+      "backgroundColor": "#eef4f0",
+      "display": "standalone",
+      "description": "Emotion-driven yoga: pick how you feel, get poses, instructions, and a timer."
+    },
+    "experiments": {
+      "baseUrl": "/manasana"
     }
   }
 }
