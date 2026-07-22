@@ -26,8 +26,8 @@ const manifest = {
   start_url: `${BASE}/`,
   scope: `${BASE}/`,
   display: 'standalone',
-  background_color: '#eef4f0',
-  theme_color: '#4c8a72',
+  background_color: '#FBF8F1',
+  theme_color: '#5A4FCF',
   icons: [
     { src: `${BASE}/icon.png`, sizes: '192x192', type: 'image/png', purpose: 'any' },
     { src: `${BASE}/icon.png`, sizes: '512x512', type: 'image/png', purpose: 'any maskable' },

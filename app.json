@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "scheme": "manasana",
     "userInterfaceStyle": "light",
-    "backgroundColor": "#eef4f0",
+    "backgroundColor": "#FBF8F1",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.manasana.app"
@@ -27,8 +27,8 @@
       "output": "single",
       "name": "Manasana",
       "shortName": "Manasana",
-      "themeColor": "#4c8a72",
-      "backgroundColor": "#eef4f0",
+      "themeColor": "#5A4FCF",
+      "backgroundColor": "#FBF8F1",
       "display": "standalone",
       "description": "Emotion-driven yoga: pick how you feel, get poses, instructions, and a timer."
     },
