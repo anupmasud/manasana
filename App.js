@@ -8,11 +8,15 @@ import {
   Switch,
   StyleSheet,
   Platform,
+  Linking,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { EMOTIONS, POSES, SAFETY_NOTE } from './src/data';
 
-const APP_VERSION = 'v1.3.1';
+const APP_VERSION = 'v1.3.2';
+const CREDIT = '© 2026 Anupma · CC BY-NC-SA 4.0';
+const LICENSE_URL = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+const openLicense = () => Linking.openURL(LICENSE_URL).catch(() => {});
 const MIN_SEC = 10;
 const MAX_SEC = 600;
 const STEP = 10;
@@ -123,7 +127,12 @@ function Splash({ onBegin }) {
           <Text style={styles.beginText}>Begin</Text>
         </Pressable>
       </View>
-      <Text style={styles.splashVersion}>{APP_VERSION}</Text>
+      <View style={styles.splashFooter}>
+        <Text style={styles.splashVersion}>{APP_VERSION}</Text>
+        <Pressable onPress={openLicense} accessibilityRole="link">
+          <Text style={styles.credit}>{CREDIT}</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -180,6 +189,9 @@ function Home({ onPick }) {
 
       <Text style={styles.safety}>{SAFETY_NOTE}</Text>
       <Text style={styles.version}>{APP_VERSION}</Text>
+      <Pressable onPress={openLicense} accessibilityRole="link">
+        <Text style={styles.credit}>{CREDIT}</Text>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -753,8 +765,10 @@ const styles = StyleSheet.create({
   splashEtym: { fontSize: 14, color: MUTE, textAlign: 'center', marginTop: 20, lineHeight: 21, paddingHorizontal: 8 },
   beginBtn: { marginTop: 36, backgroundColor: PURPLE, borderRadius: 999, paddingVertical: 14, paddingHorizontal: 52 },
   beginText: { color: '#fff', fontSize: 17, fontWeight: '700', letterSpacing: 1 },
-  splashVersion: { position: 'absolute', bottom: 24, alignSelf: 'center', fontSize: 12, color: MUTE, letterSpacing: 1 },
+  splashFooter: { position: 'absolute', bottom: 20, alignSelf: 'center', alignItems: 'center' },
+  splashVersion: { fontSize: 12, color: MUTE, letterSpacing: 1 },
   version: { fontSize: 12, color: MUTE, textAlign: 'center', marginTop: 10, letterSpacing: 1 },
+  credit: { fontSize: 11, color: MUTE, textAlign: 'center', marginTop: 4 },
 
   /* Home brand */
   homeDev: { fontSize: 30, color: PURPLE, fontWeight: '600', textAlign: 'center', marginTop: 10 },

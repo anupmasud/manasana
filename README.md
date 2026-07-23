@@ -29,3 +29,7 @@ npm run build:web  # export static web build to dist/ (for GitHub Pages)
 - **Never forced** — the timer only runs if the user starts it.
 - **Offline-first** — pose content is bundled; no account required.
 - **No medical claims** — a wellness aid, not therapy or medical advice.
+
+## License
+
+© 2026 Anupma. Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — share and adapt with attribution, non-commercially, under the same license. See [LICENSE](LICENSE).
