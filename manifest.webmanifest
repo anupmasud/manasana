@@ -1,0 +1,24 @@
+{
+  "name": "Manasana",
+  "short_name": "Manasana",
+  "description": "Emotion-driven yoga: pick how you feel, get poses, instructions, and a timer.",
+  "start_url": "/manasana/",
+  "scope": "/manasana/",
+  "display": "standalone",
+  "background_color": "#FBF8F1",
+  "theme_color": "#5A4FCF",
+  "icons": [
+    {
+      "src": "/manasana/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manasana/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
